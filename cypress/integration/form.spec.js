@@ -1,15 +1,9 @@
 import formSelectors from '../selectors/formSelectors'
-import loginSelectors from '../selectors/loginSelectors';
 
 describe('Form', () => {
   it('form changes header correctly correctly', () => {
     cy.visit('/login');
-
-    cy.get(loginSelectors.username).type('username');
-    cy.get(loginSelectors.password).type('correct');
-    cy.get(loginSelectors.loginButton).click();
-
-    cy.url().should('not.contain', '/login');
+    cy.login({ username: 'username', password: 'correct' })
 
     cy.get(formSelectors.name).type('Tywin');
     cy.get(formSelectors.surnameContainer).click();
