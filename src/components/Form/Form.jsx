@@ -41,6 +41,9 @@ const Form = () => {
             className={classes.textField}
             value={name}
             onChange={event => setName(event.target.value)}
+            inputProps={{
+              'data-id': 'Form:input-name'
+            }}
           />
           <Select
             id="surname"
@@ -49,13 +52,14 @@ const Form = () => {
             onOpen={() => setIsSelectOpened(true)}
             value={surname}
             onChange={(event) => setSurname(event.target.value)}
+            data-id="Form:select-surname"
           >
-            <MenuItem value="">
+            <MenuItem data-id="Form:select-row_" value="">
               <em>None</em>
             </MenuItem>
-            <MenuItem value={'Stark'}>Stark</MenuItem>
-            <MenuItem value={'Lannister'}>Lannister</MenuItem>
-            <MenuItem value={'Tarly'}>Tarly</MenuItem>
+            <MenuItem data-id="Form:select-row_Stark" value={'Stark'}>Stark</MenuItem>
+            <MenuItem data-id="Form:select-row_Lannister" value={'Lannister'}>Lannister</MenuItem>
+            <MenuItem data-id="Form:select-row_Tarly" value={'Tarly'}>Tarly</MenuItem>
           </Select>
         </FormControl>
       </Paper>
