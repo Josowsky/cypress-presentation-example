@@ -29,7 +29,7 @@ const Form = () => {
   return (
     <div className="main-form">
       <Paper className="main-form__card">
-        <Typography className={classes.header} color="textSecondary" gutterBottom>
+        <Typography id="header" className={classes.header} color="textSecondary" gutterBottom>
           {name} {surname} &nbsp;
         </Typography>
         <FormControl>
