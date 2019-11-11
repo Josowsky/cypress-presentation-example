@@ -1,0 +1,1 @@
+export const getByDataId = name => `[data-id="${name}"]`;

@@ -59,6 +59,9 @@ const _Login = ({ history }) => {
             className={classes.textField}
             value={name}
             onChange={event => setName(event.target.value)}
+            inputProps={{
+              'data-id': 'Login:input-username'
+            }}
           />
           <TextField
             id="password"
@@ -69,8 +72,11 @@ const _Login = ({ history }) => {
             className={classes.textField}
             value={password}
             onChange={event => setPassword(event.target.value)}
+            inputProps={{
+              'data-id': 'Login:input-password'
+            }}
           />
-          <Button onClick={loginUser} disabled={!name || !password} variant="contained" color="primary" className={classes.button}>
+          <Button data-id="Login:button-submit" onClick={loginUser} disabled={!name || !password} variant="contained" color="primary" className={classes.button}>
             Login
           </Button>
         </FormControl>
